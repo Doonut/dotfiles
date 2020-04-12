@@ -1,0 +1,2 @@
+sudo brctl stp br0 on
+sudo iptables -A FORWARD -p all -i br0 -j ACCEPT

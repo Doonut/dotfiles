@@ -1,0 +1,4 @@
+ssh-copy-id $1
+ssh $1 "mkdir ~/.terminfo"
+ssh $1 "mkdir ~/.terminfo/r"
+scp /usr/share/terminfo/r/rxvt-unicode-256color $1:~/.terminfo/r/

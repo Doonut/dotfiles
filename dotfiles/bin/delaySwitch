@@ -1,0 +1,8 @@
+!#/bin/bash
+TOGGLE=$HOME/.toggle2
+if [ ! -e $TOGGLE ]; then
+    touch $TOGGLE
+    /home/kyle/bin/workspaceBig
+    sleep 5
+    rm $TOGGLE
+fi

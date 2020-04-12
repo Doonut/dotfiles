@@ -1,0 +1,4 @@
+#!/bin/bash
+rm /home/kyle/.xsession-errors
+ln -s /dev/null /home/kyle/.xsession-errors
+

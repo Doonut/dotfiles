@@ -1,0 +1,12 @@
+#!/bin/bash
+for f in *.m4b
+do
+  f2=${f::-4}
+  ffmpeg -i "$f" "$f2.mp3" -vn
+done
+printf "file '%s'\n" ./*.mp3 > mylist.txt
+OUT="$(sed "1q;d" mylist.txt | sed 's/01/\n/g' | sed "2q;d" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+ffmpeg -f concat -safe 0 -i mylist.txt -acodec copy "$OUT.mp3"
+mv "$OUT.mp3" ../
+rm *.mp3
+rm mylist.txt

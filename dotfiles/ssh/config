@@ -1,0 +1,25 @@
+Host hades
+    HostName 10.0.3.1
+    User root
+# Host merikServer
+#     HostName fccthef.cc
+#     User root
+Host merikLocal
+    HostName fccthef.cc
+    User root
+Host zeus
+    HostName 10.0.0.20
+Host derekServer
+    User root
+    HostName 108.64.11.78
+Host artemis
+    HostName 10.0.3.22
+    User root
+Host apollo
+    HostName 10.0.0.40
+    StrictHostKeyChecking no
+    UserKnownHostsFile=/dev/null
+Host helios
+    HostName 10.0.3.5
+Host poseidon
+    HostName 10.0.0.25

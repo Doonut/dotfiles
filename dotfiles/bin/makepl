@@ -1,0 +1,9 @@
+#!/bin/bash
+playlistDir="/home/kyle/playlists"
+musicDir="/mnt/shares/Media/Music/Youtube"
+playlistId=$1
+playlistName=$(echo `curl -s "https://www.googleapis.com/youtube/v3/playlists?part=snippet&id=${playlistId}&key=AIzaSyCrvKAWVjfjYyGzljNgcTzFIAVb3QKMDzs"` | jq -r .items | jq -r '.[0] | .snippet.title')
+currentPlaylist="$playlistDir/$playlistName.m3u"
+touch $currentPlaylist
+find $musicDir/$playlistName | grep -E 'mp3|webm|opus' | xargs --null echo >> $currentPlaylist
+mpc update

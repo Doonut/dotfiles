@@ -1,0 +1,1 @@
+env LD_LIBRARY_PATH=/usr/lib/nvidia/:/usr/lib32/nvidia/ /usr/bin/X :1 vt$(fgconsole) -config xorg.win.conf -keeptty -nolisten tcp -noreset -verbose 3

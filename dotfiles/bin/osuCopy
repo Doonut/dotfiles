@@ -1,0 +1,9 @@
+#!/bin/bash
+# runs on new file / changed file
+
+inotifywait -m /home/kyle/Downloads -e create -e moved_to -e modify |
+    while read path action file; do
+        if [[ "$file" =~ .*osz$ ]]; then
+            mv /home/kyle/Downloads/"$file" /mnt/storage/Games/osu/drive_c/osu/Songs/
+        fi
+    done
