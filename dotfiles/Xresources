@@ -1,0 +1,95 @@
+rofi.show-icons    : true
+rofi.hide-scrollbar: true
+rofi.dpi           : 0              ! Autodetect DPI from X11
+rofi.bw            : 0              ! No border
+rofi.width         : 30             ! Width as a percentage of total width
+rofi.lines         : 10             ! Show 11 lines without scrolling
+rofi.padding       : 8              ! 8 pixel padding
+rofi.font          : Hack Nerd Font Mono 16
+rofi.window-format : {c} {t}
+
+rofi.color-enabled: true
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
+rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
+rofi.ssh-client: ssh
+rofi.ssh-command: urxvt -e {ssh-client} {host}
+
+Xft.antialias:              1
+Xft.rgba:                   rgb
+Xft.hinting:                false
+Xft.hintstyle:              hintslight
+Xft.autohint: 1
+Xft.lcdfilter: lcddefault
+
+URxvt.geometry:             90x30
+URxvt.saveLines:            1000
+URxvt.lineSpace:            0
+URxvt.internalBorder:	    10
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+URxvt*font: xft:Hack Nerd Font Mono:style=Bold:size=12
+URxvt*boldFont: xft:Hack Nerd Font Mono:style=Bold:size=12
+Urxvt*italicFont: xft:Hack Nerd Font Mono:style=Italic:size=12
+URxvt*scrollTtyOutput:  false
+URxvt*letterSpace: -1
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:    URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common:      default,clipboard,matcher
+URxvt.clipboard.autocopy: true
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Pointer
+URxvt.pointerBlank:         true
+
+Xcursor.theme: ATER_Blue
+
+!!Source http://github.com/altercation/solarized
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+*background:              S_base03
+*foreground:              S_base0
+*fading:                  40
+*fadeColor:               S_base03
+*cursorColor:             S_base1
+*pointerColorBackground:  S_base01
+*pointerColorForeground:  S_base1
+*color0:                  S_base02
+*color1:                  S_red
+*color2:                  S_green
+*color3:                  S_yellow
+*color4:                  S_blue
+*color5:                  S_magenta
+*color6:                  S_cyan
+*color7:                  S_base2
+*color9:                  S_orange
+*color8:                  S_base03
+*color10:                 S_base01
+*color11:                 S_base00
+*color12:                 S_base0
+*color13:                 S_violet
+*color14:                 S_base1
+*color15:                 S_base3

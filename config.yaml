@@ -1,0 +1,48 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_vimrc:
+    src: vimrc
+    dst: ~/.vimrc
+  d_vim:
+    src: vim
+    dst: ~/.vim
+  d_polybar:
+    src: config/polybar
+    dst: ~/.config/polybar
+  d_bspwm:
+    src: config/bspwm
+    dst: ~/.config/bspwm
+  d_sxhkd:
+    src: config/sxhkd
+    dst: ~/.config/sxhkd
+  f_synergy.conf:
+    src: synergy.conf
+    dst: ~/synergy.conf
+  f_xresources:
+    src: Xresources
+    dst: ~/.Xresources
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  d_zsh:
+    src: zsh
+    dst: ~/.zsh
+  f_p10k.zsh:
+    src: p10k.zsh
+    dst: ~/.p10k.zsh
+profiles:
+  zeus:
+    dotfiles:
+    - f_vimrc
+    - d_vim
+    - d_polybar
+    - d_bspwm
+    - d_sxhkd
+    - f_synergy.conf
+    - f_xresources
+    - f_zshrc
+    - d_zsh
+    - f_p10k.zsh

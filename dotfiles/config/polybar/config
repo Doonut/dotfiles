@@ -1,0 +1,103 @@
+[colors]
+background = #002b36
+foreground = #839496
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+border = #073642
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[bar/full]
+monitor = ${env:MONITOR:DVI-D-0}
+bottom = true
+width = 100%
+height = 27
+offset-x = 0
+offset-y = 0
+enable-ipc = true
+override-redirect = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 2
+overline-color = #f00
+underline-size = 2
+underline-color = #00f
+
+border-bottom-size = 2
+border-bottom-color = #333
+
+padding-left = 2
+padding-right = 2
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = xft:Hack Nerd Font Mono:style=Bold:size=10
+font-1 = Hack Nerd Font Mono:style=Bold:size=12
+
+modules-left = xwindow
+modules-center = spotify
+modules-right = SSD ServerMedia bitcoin date
+
+tray-position = right
+tray-padding = 2
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:80:...%
+format =   <label>
+
+[module/spotify]
+type = custom/script
+interval = 1
+format =  <label> 
+exec = python /home/kyle/bin/spotify_status.py -f '{artist} - {song}'
+format-underline = #1db954
+
+[module/bitcoin]
+type = custom/script
+exec = /home/kyle/bin/getBTC.sh
+interval = 30
+format =  <label>
+format-underline = #ff9900
+
+[module/GPU]
+type = custom/script
+exec = /home/kyle/bin/getGPU.sh
+interval = 3
+format =  <label>C
+format-underline = #3C3C3D
+
+[module/SSD]
+type = custom/script
+exec = /home/kyle/bin/getDisk.sh /
+interval = 30
+format =  <label>
+format-underline = #859900
+
+[module/HD]
+type = custom/script
+exec = /home/kyle/bin/getDisk.sh /mnt/storage/
+interval = 30
+format =  <label>
+format-underline = #39CCCC
+
+[module/ServerMedia]
+type = custom/script
+exec = /home/kyle/bin/getDisk.sh /mnt/shares/Media
+interval = 30
+format =  <label>
+format-underline = #FF6241
+
+[module/date]
+type = internal/date
+interval = 1
+date = " %m-%d-%Y"
+time = %I:%M:%S
+format-underline = #0a6cf5
+
+label = %date% %time%
