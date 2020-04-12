@@ -18,9 +18,6 @@ dotfiles:
   d_sxhkd:
     src: config/sxhkd
     dst: ~/.config/sxhkd
-  f_synergy.conf:
-    src: synergy.conf
-    dst: ~/synergy.conf
   f_xresources:
     src: Xresources
     dst: ~/.Xresources
@@ -66,6 +63,9 @@ dotfiles:
   f_config:
     src: ssh/config
     dst: ~/.ssh/config
+  f_synergy.conf:
+    src: synergy.conf
+    dst: ~/.synergy.conf
 profiles:
   zeus:
     dotfiles:
@@ -74,7 +74,6 @@ profiles:
     - d_polybar
     - d_bspwm
     - d_sxhkd
-    - f_synergy.conf
     - f_xresources
     - f_zshrc
     - d_zsh
@@ -90,3 +89,4 @@ profiles:
     - d_gtk-3.0
     - d_icons
     - f_config
+    - f_synergy.conf
