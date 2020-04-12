@@ -66,6 +66,9 @@ dotfiles:
   f_synergy.conf:
     src: synergy.conf
     dst: ~/.synergy.conf
+  f_config.ini:
+    src: config/spicetify/config.ini
+    dst: ~/.config/spicetify/config.ini
 profiles:
   zeus:
     dotfiles:
@@ -90,3 +93,4 @@ profiles:
     - d_icons
     - f_config
     - f_synergy.conf
+    - f_config.ini
