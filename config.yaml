@@ -33,6 +33,39 @@ dotfiles:
   f_p10k.zsh:
     src: p10k.zsh
     dst: ~/.p10k.zsh
+  d_oh-my-zsh:
+    src: oh-my-zsh
+    dst: ~/.oh-my-zsh
+  f_profile:
+    src: profile
+    dst: ~/.profile
+  d_bin:
+    src: bin
+    dst: ~/bin
+  f_dircolors:
+    src: dircolors
+    dst: ~/.dircolors
+  d_screenlayout:
+    src: screenlayout
+    dst: ~/.screenlayout
+  d_dunst:
+    src: config/dunst
+    dst: ~/.config/dunst
+  d_glava:
+    src: config/glava
+    dst: ~/.config/glava
+  d_synergy:
+    src: config/Synergy
+    dst: ~/.config/Synergy
+  d_gtk-3.0:
+    src: config/gtk-3.0
+    dst: ~/.config/gtk-3.0
+  d_icons:
+    src: icons
+    dst: ~/.icons
+  f_config:
+    src: ssh/config
+    dst: ~/.ssh/config
 profiles:
   zeus:
     dotfiles:
@@ -46,3 +79,14 @@ profiles:
     - f_zshrc
     - d_zsh
     - f_p10k.zsh
+    - d_oh-my-zsh
+    - f_profile
+    - d_bin
+    - f_dircolors
+    - d_screenlayout
+    - d_dunst
+    - d_glava
+    - d_synergy
+    - d_gtk-3.0
+    - d_icons
+    - f_config
