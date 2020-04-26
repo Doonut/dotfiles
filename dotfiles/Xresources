@@ -37,7 +37,6 @@ URxvt*letterSpace: -1
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.cursorBlink:          true
 URxvt.cursorColor:          #657b83
-URxvt.cursorUnderline:    URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
 URxvt.perl-ext-common:      default,clipboard,matcher
 URxvt.clipboard.autocopy: true

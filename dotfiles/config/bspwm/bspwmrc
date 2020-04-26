@@ -5,7 +5,7 @@ sxhkd &
 bspc monitor 0x00400004 -n "1" -d 1/{a,b,c,d,e,f}
 bspc monitor 0x00400006 -n "2" -d 2/{a,b,c,d,e,f}
 bspc monitor 0x00400008 -n "3" -d 3/{a,b,c,d,e,f}
-bspc monitor 0x00400002 -n "4" -d 4/{a,b,c,d,e,f}
+bspc monitor 0x00400002 -n "4" -d 4/{a,b,c,d,e,f,g}
 
 bspc config border_width         2
 bspc config border_width                  2
@@ -27,11 +27,6 @@ bspc config pointer_motion_interval 7ms
 
 # bspc wa -a Full 5760x1080+0+1440
 # bspc node somenode -m Full -t fullscreen
-# bspc rule -a Gimp desktop='^8' state=floating follow=on
-# bspc rule -a Chromium desktop='^2'
-# bspc rule -a mplayer2 state=floating
-# bspc rule -a Kupfer.py focus=on
-# bspc rule -a Screenkey manage=off
 bspc rule -a "TeamSpeak 3" desktop='1/a'
 bspc rule -a "Hexchat" desktop='1/b'
 bspc rule -a "discord" desktop='1/c'
@@ -42,7 +37,6 @@ bspc rule -a "Slack" desktop='1/e'
 bspc rule -a "Code" desktop='4/c'
 
 polybar full &
-feh --bg-scale --no-xinerama ~/Pictures/LinuxOnWin.png &
 dunst &
 dropbox &
 ~/bin/osuCopy &
@@ -63,8 +57,11 @@ sh -c 'sleep 6; exec teamspeak3' &
 mailspring &
 hexchat &
 code &
-env HOME=/home/kyle/spotify_fix_zeus spotify &
+# env HOME=/home/kyle/spotify_fix_zeus spotify &
+mpd &
+bspc desktop -f "2/a"; urxvt -e ncmpcpp &  
 ~/bin/discordNoCrash.sh &
 env QT_STYLE_OVERRIDE=gtk2 zeal &
 corectrl &
 glava -r "setgeometry 0 1121 2560 1440" &
+feh --bg-scale --no-xinerama ~/Pictures/LinuxOnWin.png &

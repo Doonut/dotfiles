@@ -18,7 +18,7 @@ alt + Escape
 alt + shift + e
 	bspc {quit,wm -r}
 
-# close and kill
+# close
 alt + shift + q
 	bspc node -c
 
@@ -123,8 +123,8 @@ super + {h,j,k,l}
 #
 
 XF86AudioRaiseVolume 
-	/home/kyle/bin/spotVol.sh up
+	mpc vol +5
 XF86AudioLowerVolume
-	/home/kyle/bin/spotVol.sh down
+    mpc vol -5
 XF86AudioNext
-	playerctl next
+	mpc next

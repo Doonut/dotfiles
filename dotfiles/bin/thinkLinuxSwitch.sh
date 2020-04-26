@@ -35,8 +35,8 @@ if [ ! -e $TOGGLE ]; then
     bspc desktop -f "4/a"
 else
     rm $TOGGLE
-    sudo ddcutil -d 1 setvcp 60 0x03
-    sed -i 's:^configFile.*$:configFile=/home/kyle/.synergy.conf:g' /home/kyle/.config/Synergy/Synergy.conf
+    sudo ddcutil -d 1 setvcp 60 0x11
+    sed -i 's:^configFile.*$:configFile=/home/kyle/.thinkSynergy.conf:g' /home/kyle/.config/Synergy/Synergy.conf
     synergy &
     killall glava
     xrandr --output DisplayPort-0 --off \

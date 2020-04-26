@@ -117,6 +117,7 @@ export THEOS_DEVICE_IP=10.0.0.203 THEOS_DEVICE_PORT=22
 export PATH="/home/kyle/bin:$PATH"
 export PATH="/home/kyle/.gem/ruby/2.4.0/bin:$PATH"
 export PATH="/home/kyle/.cargo/bin:$PATH"
+export PATH="/home/kyle/.gem/ruby/2.7.0/bin:$PATH"
 export TODO_DB_PATH=/home/kyle/.todos/todo.json
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4"
 

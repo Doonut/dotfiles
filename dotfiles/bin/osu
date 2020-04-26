@@ -2,6 +2,6 @@
 
 export vblank_mode=0
 export WINEARCH=win32
-export WINEPREFIX=$HOME/.osu-wine 
-cd /mnt/shares/linuxStorage/Games/osu
+export WINEPREFIX=/home/kyle/.osu-wine
+cd /mnt/shares/linuxStorage/Games/osu/drive_c/osu
 wine osu\!.exe "$@"
